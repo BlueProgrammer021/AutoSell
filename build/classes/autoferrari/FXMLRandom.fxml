@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="arcPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="421.0" prefWidth="724.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autoferrari.FXMLRandomController">
+   <children>
+      <TableView fx:id="carTable" layoutX="14.0" layoutY="14.0" prefHeight="281.0" prefWidth="700.0">
+        <columns>
+          <TableColumn fx:id="constructorColumn" prefWidth="109.0" text="CONSTRUCTOR" />
+          <TableColumn fx:id="modelColumn" prefWidth="108.0" text="MODEL" />
+            <TableColumn fx:id="releaseColumn" minWidth="8.0" prefWidth="109.0" text="RELEASE DATE" />
+            <TableColumn fx:id="availabilityColumn" prefWidth="87.0" text="AVAILABILITY" />
+            <TableColumn fx:id="colorColumn" prefWidth="56.0" text="COLOR" />
+            <TableColumn fx:id="cubismColumn" prefWidth="73.0" text="CUBISM" />
+            <TableColumn fx:id="fuelColumn" prefWidth="66.0" text="FUEL" />
+            <TableColumn fx:id="priceColumn" prefWidth="90.0" text="PRICE" />
+        </columns>
+      </TableView>
+      <HBox layoutX="14.0" layoutY="307.0" prefHeight="100.0" prefWidth="250.0">
+         <children>
+            <VBox alignment="TOP_RIGHT" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="constructor :">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="model :">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="release date :">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="availability :">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="150.0">
+               <children>
+                  <TextField fx:id="constructorField" />
+                  <TextField fx:id="modelField" />
+                  <TextField fx:id="releaseDate" />
+                  <TextField fx:id="availabilityField" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox layoutX="264.0" layoutY="307.0" prefHeight="100.0" prefWidth="250.0">
+         <children>
+            <VBox alignment="TOP_RIGHT" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="color :">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="cubism :">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="fuel :">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="price :">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="100.0" prefWidth="152.0">
+               <children>
+                  <TextField fx:id="colorField" />
+                  <TextField fx:id="cubismField" />
+                  <ComboBox fx:id="fuelComboBox" prefWidth="150.0" />
+                  <TextField fx:id="priceField" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox layoutX="530.0" layoutY="327.0" prefHeight="56.0" prefWidth="180.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#addCar" text="Add Car">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" />
+                     </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu fx:id="contextMenu1">
+                          <items>
+                            <MenuItem fx:id="popupAdd" mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#deleteCar" text="Delete Car">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu fx:id="contextMenu2">
+                          <items>
+                            <MenuItem fx:id="popupDel" mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#clearFields" text="Clear">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#backPage" text="Back">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

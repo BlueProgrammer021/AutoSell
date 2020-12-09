@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="AutoFerrari.jnlp">
+  <information>
+    <title>AutoFerrari</title>
+    <vendor>lenovo</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="AutoFerrari.jar" size="41928" download="eager" />
+    <jar href="lib\postgresql-42.2.17.jar" size="1004734" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="autoferrari.AutoFerrari"  name="AutoFerrari" />
+  <update check="always"/>
+</jnlp>

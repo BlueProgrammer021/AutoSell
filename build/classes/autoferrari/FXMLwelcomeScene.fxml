@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="421.0" prefWidth="724.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autoferrari.FXMLwelcomeSceneController">
+   <children>
+      <Label alignment="CENTER" layoutX="260.0" layoutY="69.0" prefHeight="48.0" prefWidth="223.0" text="Home Page">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="logOutBtn" layoutX="649.0" layoutY="376.0" mnemonicParsing="false" onAction="#logOff" text="Log Out" />
+      <VBox layoutX="252.0" layoutY="211.0" prefHeight="72.0" prefWidth="239.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="48.0" prefWidth="270.0">
+               <children>
+                  <Button fx:id="clientsBtn" mnemonicParsing="false" onAction="#clientsPage" text="Clients">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="carBtn" alignment="CENTER" mnemonicParsing="false" onAction="#carsPage" text="Cars">
+                     <HBox.margin>
+                        <Insets left="24.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="payments" alignment="CENTER" mnemonicParsing="false" onAction="#paymentsPage" text="Payments">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="24.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="clientUpdate" alignment="CENTER" mnemonicParsing="false" onAction="#clientUpdatePage" text="Update Client">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="carUpdate" alignment="CENTER" mnemonicParsing="false" onAction="#carUpdatePage" text="Update Car">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <ImageView fitHeight="30.0" fitWidth="70.0" layoutX="269.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/customer-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="47.0" layoutX="347.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/cars-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="40.0" layoutX="434.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/purchase-icon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
